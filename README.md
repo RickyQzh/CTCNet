@@ -38,7 +38,7 @@ This pre-trained model is a lip-reading model trained only on videos, and it ach
 
 | Datasets |  Links  | Pretrained Models  |
 | ------------ | ------------ |------------ |
-| LRS2-2Mix  | [Removed for copyright | [Google Driver](https://drive.google.com/file/d/13-T3nBnf21-lMKrV_XbH6Lf4vK2xU7lS/view?usp=sharing)|
+| LRS2-2Mix  | Removed for copyright | [Google Driver](https://drive.google.com/file/d/13-T3nBnf21-lMKrV_XbH6Lf4vK2xU7lS/view?usp=sharing)|
 
 ### Dependencies
 
