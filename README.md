@@ -28,9 +28,9 @@ The generated datasets (LRS2-2Mix, LRS3-2Mix, and VoxCeleb2-2Mix) can be downloa
 
 | Datasets |  Links  | Pretrained Models  |
 | ------------ | ------------ |------------ |
-| LRS2-2Mix  | [Baidu Driver](https://pan.baidu.com/s/1FejWqmaYMejOt_8W1TVW4A) Password: **v6bi**  | [Google Driver](https://drive.google.com/file/d/1WtcpYYr8nMiIpJ1epnuGNk2DtiacUXDf/view?usp=sharing)|
-| LRS3-2Mix  |  [Baidu Driver](https://pan.baidu.com/s/1FejWqmaYMejOt_8W1TVW4A) Password: **v6bi** |[Google Driver](https://drive.google.com/file/d/19OqNxY1jaO8USM-KnAIJ9B0Rh_Uwh5Ji/view?usp=sharing)|
-| VoxCeleb2-2Mix |  [Baidu Driver](https://pan.baidu.com/s/1FejWqmaYMejOt_8W1TVW4A) Password: **v6bi** |[Google Driver](https://drive.google.com/file/d/1jFHC6R51tpqyUd81LYM8Tg45NbbjWkwV/view?usp=sharing) |
+| LRS2-2Mix  | Removed for copyright | [Google Driver](https://drive.google.com/file/d/1WtcpYYr8nMiIpJ1epnuGNk2DtiacUXDf/view?usp=sharing)|
+| LRS3-2Mix  | Removed for copyright |[Google Driver](https://drive.google.com/file/d/19OqNxY1jaO8USM-KnAIJ9B0Rh_Uwh5Ji/view?usp=sharing)|
+| VoxCeleb2-2Mix | Removed for copyright |[Google Driver](https://drive.google.com/file/d/1jFHC6R51tpqyUd81LYM8Tg45NbbjWkwV/view?usp=sharing) |
 
 ### Video Pretrain model
 
@@ -38,7 +38,7 @@ This pre-trained model is a lip-reading model trained only on videos, and it ach
 
 | Datasets |  Links  | Pretrained Models  |
 | ------------ | ------------ |------------ |
-| LRS2-2Mix  | [LRW](https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrw1.html) | [Google Driver](https://drive.google.com/file/d/13-T3nBnf21-lMKrV_XbH6Lf4vK2xU7lS/view?usp=sharing)|
+| LRS2-2Mix  | [Removed for copyright | [Google Driver](https://drive.google.com/file/d/13-T3nBnf21-lMKrV_XbH6Lf4vK2xU7lS/view?usp=sharing)|
 
 ### Dependencies
 
