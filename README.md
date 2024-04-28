@@ -2,7 +2,7 @@
 
 #### Kai Li, Fenghua Xie, Hang Chen, Kexin Yuan, and Xiaolin Hu | Tsinghua University
 
-PyTorch Implementation of [CTCNet (Arxiv'22)](https://arxiv.org/pdf/2212.10744v1.pdf): An Audio-Visual Speech Separation Model Inspired by Cortico-Thalamo-Cortical Circuits.
+PyTorch Implementation of [CTCNet (TPAMI 2024)](https://arxiv.org/pdf/2212.10744v1.pdf): An Audio-Visual Speech Separation Model Inspired by Cortico-Thalamo-Cortical Circuits.
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2212.10744v1) [![GitHub Stars](https://img.shields.io/github/stars/JusperLee/CTCNet?style=social)](https://github.com/JusperLee/CTCNet) ![visitors](https://visitor-badge.laobi.icu//badge?page_id=JusperLee/CTCNet)
 
@@ -97,10 +97,11 @@ This implementation uses parts of the code from the following Github repos: [Ast
 ## Citations ##
 If you find this code useful in your research, please cite our work:
 ```bib
-@article{li2022audio,
-  title={An Audio-Visual Speech Separation Model Inspired by Cortico-Thalamo-Cortical Circuits},
+@article{li2024audio,
+  title={An audio-visual speech separation model inspired by cortico-thalamo-cortical circuits},
   author={Li, Kai and Xie, Fenghua and Chen, Hang and Yuan, Kexin and Hu, Xiaolin},
-  journal={arXiv preprint arXiv:2212.10744},
-  year={2022}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
 }
 ```
