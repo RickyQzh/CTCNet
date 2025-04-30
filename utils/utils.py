@@ -12,7 +12,9 @@ import librosa
 import torch
 import cv2
 import numpy as np
-from torch._six import string_classes
+
+string_classes = str
+
 import collections.abc
 import json
 import shutil

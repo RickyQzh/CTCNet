@@ -76,7 +76,7 @@ def main():
     print("Video statistics: ", video.width, video.height, video.resolution, video.fps)
     frames = [Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)) for frame in video]
     print('Number of frames in video: ', len(frames))
-    fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, flip_input=False)
+    fa = face_alignment.FaceAlignment(face_alignment.LandmarksType.TWO_D, flip_input=False)
 
     for i, frame in enumerate(frames):
         print('\rTracking frame: {}'.format(i + 1), end='')
@@ -121,17 +121,32 @@ def main():
             # Add to frame list
             frames_tracked.append(frame_draw)
         dim = frames_tracked[0].size
-        fourcc = cv2.VideoWriter_fourcc(*'FMP4')    
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')    
         video_tracked = cv2.VideoWriter(os.path.join(args.output_path, 'video_tracked' + str(s+1) + '.mp4'), fourcc, 25.0, dim)
         for frame in frames_tracked:
             video_tracked.write(cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR))
         video_tracked.release()
 
+
+    for i in range(args.number_of_speakers):
+        # 获取当前 speaker 的 landmarks 列表
+        landmarks = landmarks_dic[i]
+
+        # 打印该列表的长度（即有多少帧）
+        print(f"Speaker {i+1} - Number of frames: {len(landmarks)}")
+
+        # 打印每一帧 landmarks 的 shape
+        for j, landmark in enumerate(landmarks):
+            # 如果当前 landmark 的 frame 数量是 2，选择第一个帧
+            if len(landmark) == 2:
+                landmarks[j] = landmark[:1]  # 只选择第一个元素，确保是 (1, 68, 2)
+
+
     # Save landmarks
-    for i in range(args.number_of_speakers):    
+    for i in range(args.number_of_speakers):  
         utils.save2npz(os.path.join(args.output_path, 'landmark', 'speaker' + str(i+1)+'.npz'), data=landmarks_dic[i])
         dim = face.size
-        fourcc = cv2.VideoWriter_fourcc(*'FMP4')    
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')    
         speaker_video = cv2.VideoWriter(os.path.join(args.output_path, 'faces', 'speaker' + str(i+1) + '.mp4'), fourcc, 25.0, dim)
         for frame in faces_dic[i]:
             speaker_video.write(cv2.cvtColor(np.array(frame), cv2.COLOR_RGB2BGR))
