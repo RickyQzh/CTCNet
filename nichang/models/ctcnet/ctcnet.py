@@ -189,7 +189,7 @@ class AudioVisual(nn.Module):
 
         # iter 0
         a = self.audio_block(a)
-        v = self.video_block.get_block_block(0)(v)
+        v = self.video_block.get_video_block(0)(v)
         if 0 in self.fusion_levels:
             # print("fusion", 0)
             a, v = self.get_crossmodal_fusion(0)(a, v)
@@ -197,7 +197,7 @@ class AudioVisual(nn.Module):
         # iter 1 ~ self.an_repeats
         for i in range(1, self.an_repeats):
             a = self.audio_block(self.audio_concat(res_a + a))
-            video = self.video_block.get_block_block(i)
+            video = self.video_block.get_video_block(i)
             concat_block = self.video_block.get_concat_block(i)
             v = video(concat_block(res_v + v))
             if i in self.fusion_levels:
