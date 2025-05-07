@@ -28,7 +28,7 @@ warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    "-c", "--conf_dir", default="exp/vox2_10w_frcnn2_64_64_3_adamw_1e-1_blocks16_pretrain/conf.yml",
+    "-c", "--conf_dir", default="exp/lrs3_64_64_3_adamw_1e-1_blocks16_pretrain/conf.yml",
     help="Full path to save best validation model"
 )
 
@@ -38,7 +38,7 @@ def main(conf):
     conf["audionet"].update({"n_src": 1})
 
     model_path = os.path.join(conf["exp_dir"], "checkpoints/last.ckpt")
-    model_path = "exp/vox2_10w_frcnn2_64_64_3_adamw_1e-1_blocks16_pretrain/best_model.pth"
+    model_path = "exp/lrs3_64_64_3_adamw_1e-1_blocks16_pretrain/best_model.pth"
     sample_rate = conf["data"]["sample_rate"]
     audiomodel = CTCNet(sample_rate=sample_rate, **conf["audionet"])
     ckpt = torch.load(model_path, map_location="cpu")['state_dict']
@@ -54,7 +54,7 @@ def main(conf):
 
     # Randomly choose the indexes of sentences to save.
     torch.no_grad().__enter__()
-    for idx in range(1, 2):
+    for idx in [1, 2]:
         spk, sr = sf.read("test_videos/interview/interview.wav", dtype="float32")
         mouth = get_preprocessing_pipelines()["val"](np.load("test_videos/interview/mouthroi/speaker{}.npz".format(idx))["data"])
         key = "spk{}".format(idx)
